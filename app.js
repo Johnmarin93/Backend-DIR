@@ -4,6 +4,7 @@ import authRoutes from './routes/auth.routes.js';
 import cookieParser from 'cookie-parser';  // Nos permite convertir una cookie en un objeto json 
 import taskRoutes from './routes/tasks.routes.js';
 import cors from 'cors'; // Es un control de acceso en http 
+import { FRONTED_URL } from './config.js';
 
 //Inicia la app
 const app=express()
@@ -11,8 +12,8 @@ const app=express()
 // Cors  es un mecanismo basado en cabeceras HTTP que permite a un servidor indicar cualquier dominio
 app.use(cors(
     {
-        origin: 'https://cred-dir.netlify.app',   // Tan solo por este 
-        /*http://localhost:5173*/ 
+        origin: FRONTED_URL,   // Tan solo por este 
+        /*https://cred-dir.netlify.app*/ 
         credentials: true
     }
 ));
