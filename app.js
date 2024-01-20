@@ -11,7 +11,8 @@ const app=express()
 // Cors  es un mecanismo basado en cabeceras HTTP que permite a un servidor indicar cualquier dominio
 app.use(cors(
     {
-        origin: 'http://localhost:5173',   // Tan solo por este 
+        origin: 'https://cred-dir.netlify.app',   // Tan solo por este 
+        /*http://localhost:5173*/ 
         credentials: true
     }
 ));
