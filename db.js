@@ -8,7 +8,7 @@ export const conectDB= async ()=>{
     
     //try catch para que si no hay problemas ejecute la conexion de lo contrario muestre el error por consola
     try {
-        await mongoose.connect('mongodb+srv://johnmarin:Sdh4nLOxBdQ9WrOk@cluster0.gtln7mq.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp');
+        await mongoose.connect(`${MONGODB_URI}`);
         console.log(">>> DB is connected")
     }catch (error){
         console.log(error);
